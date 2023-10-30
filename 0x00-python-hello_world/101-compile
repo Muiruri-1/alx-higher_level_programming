@@ -1,3 +1,13 @@
 #!/bin/bash
-python3 -m compileall $PYFILE -b
-Give feedback
+import os
+import py_compile
+
+py_file = os.environ.get('PYFILE')
+
+if py_file:
+    pyc_file = py_file + 'c'
+    py_compile.compile(py_file, pyc_file)
+    print(f"Compiled {py_file} to {pyc_file}")
+else:
+    print("Please set the environment variable PYFILE with the name of the Python file to compile.")
+
