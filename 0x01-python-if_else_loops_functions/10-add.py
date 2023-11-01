@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-def add(m, n):
-    return m + n
-
+def add(a, b):
+    return a + b
