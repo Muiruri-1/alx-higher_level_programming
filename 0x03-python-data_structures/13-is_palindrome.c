@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
 
 /**
 *add_nodeint - adds new node at the start of a listint_t list
