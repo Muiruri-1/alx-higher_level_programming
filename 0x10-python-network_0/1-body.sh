@@ -1,3 +1,3 @@
 #!/bin/bash
-# This script takes a URL as input, sends a GET request using curl in silent mode, and displays the body of the response if the status code is 200
-curl -s -o /tmp/response_body -w "%{http_code}" "$1" | awk '{ if ($0 == "200") { getline; print } }'
+# This script displays the body of a successful GET request response (200 code)
+curl -s -o /dev/null -w "%{http_code}\n" "$1" | grep 200 && curl -s "$1"
